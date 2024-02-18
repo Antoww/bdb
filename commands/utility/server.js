@@ -4,6 +4,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
+    cooldown: 5,
     data: new SlashCommandBuilder()
         .setName('server')
         .setDescription('Donne des infos sur le serveur.'),
