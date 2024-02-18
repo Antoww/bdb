@@ -1,0 +1,25 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "bot BDB -> BAD IDEA BOT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antoww/bdb.git"
+  },
+  "author": "antow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Antoww/bdb/issues"
+  },
+  "homepage": "https://github.com/Antoww/bdb#readme",
+  "dependencies": {
+    "discord.js": "^14.14.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  }
+}
