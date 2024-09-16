@@ -2,7 +2,7 @@
 /* eslint-disable quotes */
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Events, GatewayIntentBits, Collection } = require('discord.js');
+const { Client, GatewayIntentBits, Collection } = require('discord.js');
 const { token } = require('./config.json');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -12,6 +12,20 @@ client.cooldowns = new Collection();
 
 const foldersPath = path.join(__dirname, 'commands');
 const commandFolders = fs.readdirSync(foldersPath);
+
+client.once('ready', () => {
+    console.log('Loading du client.once');
+
+    client.user.setPresence({
+        activities: [{ 
+            name: 'Discord.js v14',
+            type: 0,
+            state: 'Statut custom ouuuu ?',
+            details: 'petit test de la mif'
+        }],
+        status: 'online'
+    });
+});
 
 for (const folder of commandFolders) {
     const commandsPath = path.join(foldersPath, folder);
