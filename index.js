@@ -37,7 +37,7 @@ for (const folder of commandFolders) {
         if ('data' in command && 'execute' in command) {
             client.commands.set(command.data.name, command);
         } else {
-            console.log(`[WARNING] La commande $(filePath) a besoin des propriétés "data" et "execute"`)
+            console.log(`[WARNING] La commande ${filePath} a besoin des propriétés "data" et "execute"`)
         }
     }
 }
